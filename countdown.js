@@ -20,10 +20,3 @@ function updateCountdown() {
     }
 }
 
-// Jalankan countdown setiap detik
-const timer = setInterval(updateCountdown, 1000);
-
-// Tentukan waktu jatuh tempo
-const dueDate = new Date(endTime);
-const options = { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' };
-document.getElementById('due-date').textContent = dueDate.toLocaleString('id-ID', options);
