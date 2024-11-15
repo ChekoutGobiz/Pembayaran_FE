@@ -8,20 +8,3 @@ export function setInner(id, content) {
     }
 }
 
-// Fungsi untuk membuat elemen dengan atribut dan konten tertentu
-export function createElement(tag, attributes = {}) {
-    const element = document.createElement(tag);
-
-    // Iterasi atribut dan tambahkan ke elemen
-    for (const [key, value] of Object.entries(attributes)) {
-        if (key === "textContent") {
-            element.textContent = value;
-        } else if (key === "innerHTML") {
-            element.innerHTML = value;
-        } else {
-            element.setAttribute(key, value);
-        }
-    }
-
-    return element;
-}
